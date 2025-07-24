@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>task2</title>
+</head>
+<body>
+            <h1 style="text-align:center;">Array</h1>
+
+    <script>        
+        var arr=[3, 1, 2, 4, 3, 5, 1];
+
+        var distinctArr = Array.from(new Set(arr));
+
+         distinctArr.sort(function(a, b) {
+            return a - b });
+               document.write("this is array:" + arr + "<br>");
+               document.write("this is distinct array:" + distinctArr +"<br>");
+
+
+        var newarr=[3,9,7,70,55,4,0,80,60,15]
+
+      var newarr = [3, 9, 7, 70, 55, 4, 0, 80, 60, 15];
+
+    function filtering(newarr){
+        let result = [];
+        for (var i = 0; i < newarr.length; i++){
+            if (newarr[i]> 50) {
+                result.push(newarr[i])}}
+        document.write("number greater than 50 is: " + result + "<br>");
+    }
+    filtering(newarr);
+
+    var BuiltIn=newarr.filter(function(num) {
+         return num > 50})
+        document.write("use builtin method:" + BuiltIn + "<br>");
+
+    let Maxarr = [];
+    let Minarr = [];
+
+     Maxarr[0] = arr[0];
+     Minarr[0] = arr[0];
+
+    for (let i = 1; i < newarr.length; i++){
+        if (newarr[i] >  Maxarr[0]) {
+             Maxarr[0] = newarr[i]}
+        if (arr[i] < Minarr[0]) {
+            Minarr[0] = newarr[i]}
+    }
+
+    document.write("Max Number Is:" +  Maxarr[0] + "<br>");
+    document.write("Min Number Is:" + Minarr[0] + "<br>");
+    
+
+    function sumnum(newarray){
+        let sumnumber=newarray.join("+")
+        let sum=eval(sumnumber)
+        document.write("Sum Is: " + sum + "<br>");
+    }
+
+      function productnum(newarray){
+        let productnumber=newarray.join("*")
+        let product=eval(productnumber)
+        document.write("Product Is: " + product + "<br>");
+    }
+    sumnum([1,8,9,2,3]);
+    productnum([1,8,9,2,3]);
+    </script>
+</body>
+</html>

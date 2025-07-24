@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>task2</title>
+</head>
+<body>
+    <script>
+        var arr=[3, 1, 2, 4, 3, 5, 1];
+
+        var distinctArr = Array.from(new Set(arr));
+
+        distinctArr.sort(function(a, b) {
+            return a - b });
+               document.write("<h3>Original Array: " + arr + "</h3>");
+               document.write("<h3>Distinct & Sorted Array: " + distinctArr + "</h3>");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Task</title>
+</head>
+<body>
+<script>
+    let str = prompt("write the  sentence:");
+    let word = str.split(" ");
+    let CapitalWord ="";
+    for (let i = 0; i < word.length; i++) {
+        if(word[i] !== " "){ 
+            CapitalWord += word[i][0].toUpperCase() + word[i].substring(1).toLowerCase() + (" ")}
+       }
+    document.write("new sentence:" + CapitalWord.trim() + "<br>");
+
+    let longestWord = "";
+    for (let i = 0; i < word.length; i++) {
+        if(word[i].length > longestWord.length) {
+            longestWord = word[i]}
+    }
+    document.write("Longest Word Is:" + longestWord );
+</script>
+</body>
+</html>
