@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>task 1</title>
+</head>
+<body>
+
+<script>
+  var popup = window.open("","MsgWindow","width=200,height=100");
+  var message = "Welcome to JS";
+  var index = 0;
+
+ popup.document.write("<p id='MsgWindow' style='font-size:20px;'></p>");
+
+   var interval = setInterval(function() {
+     popup.document.getElementById("MsgWindow").textContent += message[index];
+      index++;
+        if (index === message.length) {
+            clearInterval(interval);
+            popup.close(); 
+        } }, 150);
+</script>
+
